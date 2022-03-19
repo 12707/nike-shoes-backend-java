@@ -1,0 +1,19 @@
+build-job:
+  stage: build
+  script:
+    - echo "Build project..."
+    - mvn install
+    - echo "Build complete!"
+
+test-job:
+  stage: test
+  script:
+    - echo "Start test..."
+    - mvn test
+    - echo "testing complete!"
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Start deploy..."
+    - echo "deploy complete!"
